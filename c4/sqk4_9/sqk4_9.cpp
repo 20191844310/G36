@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
 	printf("%d\n",count);
 	mask=pow(10,count-1);//由位数确定一开始除多少
 	while(b/10>0){
+			m=b/mask;//m=1,2,3,4（循环四次应该是）
 		b=b%mask;//m=12345,2345,345,45,5
-		m=b/mask;//m=1,2,3,4（循环四次应该是）
 		mask=mask/10;//始终保证mask与b位数相同
 		printf("%d ",m);//顺次输出各位数
 	}
